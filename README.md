@@ -70,7 +70,7 @@ python src/train.py
 python src/grad_cam.py
 ```
 ## Project Structure
-
+```text
 medical-ai-fracture-detection/
 ├── data/
 │   └── raw/
@@ -86,7 +86,7 @@ medical-ai-fracture-detection/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
-
+```
 ## Tech Stack
 - Python
 - PyTorch
