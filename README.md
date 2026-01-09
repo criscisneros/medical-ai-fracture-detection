@@ -45,6 +45,7 @@ These results reflect common **medical AI trade-offs**, where higher sensitivity
 Grad-CAM is used to visualize which regions of an X-ray most influenced the model’s predictions. This helps improve transparency and trust in the model’s decision-making process.
 
 ### Example Outputs
+<img width="1221" height="438" alt="Screenshot 2026-01-07 232440" src="https://github.com/user-attachments/assets/2f63fd3f-4490-4972-92e6-6d4ec51a7a8a" />
 
 ```text
 results/
