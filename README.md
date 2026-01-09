@@ -58,7 +58,8 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 ### 3. Train model
-need x-ray image dataset before running & make sure path is correct in .py files(used "Fracture detection using x-ray images" dataset from Kaggle for this project)
+need x-ray image dataset before running & make sure path is correct in .py files
+(used "Fracture detection using x-ray images" dataset from Kaggle for this project)
 ```bash
 python src/train.py
 ```
