@@ -52,23 +52,23 @@ results/
 ├── non_fractured_correct.png
 ```
 ## How to Run
-1. Create virtual environment
-
+### 1. Create virtual environment
+```bash
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
-
-2. Install dependencies
-
+```
+### 2. Install dependencies
+```bash
 pip install -r requirements.txt
-
-3. Train model
-
+```
+### 3. Train model
+```bash
 python src/train.py
-
-4. Generate Grad-CAM visualizations
-
+```
+### 4. Generate Grad-CAM visualizations
+```bash
 python src/grad_cam.py
-
+```
 ## Project Structure
 
 medical-ai-fracture-detection/
