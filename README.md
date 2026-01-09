@@ -1,68 +1,108 @@
-\# Medical AI Fracture Detection
+# Medical AI Fracture Detection with Grad-CAM
 
+## Overview
+This project implements a deep learning pipeline for **binary fracture detection** using X-ray images. A Convolutional Neural Network (CNN) is trained to classify images as **Fractured** or **Not Fractured**, with **Grad-CAM visualizations** used to interpret model predictions.
 
+The project was inspired by a personal wrist injury and aims to explore **medical imaging, model interpretability, and real-world machine learning challenges**.
 
-A deep learning project for detecting bone fractures from wrist X-ray images using PyTorch.
+---
 
+## Dataset
+- X-ray image dataset
+- Two classes:
+  - Fractured
+  - Not Fractured
+- Folder-based labeling (no CSV files)
+- Directory structure:
+  - `train/`
+  - `val/`
+- Image format: `.jpg`
 
+---
 
-\## Motivation
+## Model Architecture
+- Convolutional Neural Network (CNN)
+- Implemented in PyTorch
+- Binary classification output
+- Loss function: Cross-Entropy Loss
+- Optimizer: Adam
 
-This project explores the application of convolutional neural networks to medical imaging, with a focus on fracture detection and model explainability.
+---
 
+## Training & Evaluation
+The model was trained over multiple epochs and evaluated on a validation set.
 
+### Example Metrics
+- Precision: ~0.62  
+- Sensitivity (Recall): ~0.81  
+- Specificity: ~0.26  
 
-\## Dataset
+These results reflect common **medical AI trade-offs**, where higher sensitivity is often prioritized to reduce missed fractures.
 
-X-ray images organized into fractured and non-fractured classes.
+---
 
-Images are not included in this repository due to size and licensing constraints.
+## Model Interpretability (Grad-CAM)
+Grad-CAM is used to visualize which regions of an X-ray most influenced the model’s predictions. This helps improve transparency and trust in the model’s decision-making process.
 
+### Example Outputs
+(Add Grad-CAM images here if available)
 
+```text
+results/
+├── fractured_correct.png
+├── non_fractured_correct.png
 
-\## Approach
-
-\- Transfer learning with a CNN backbone (PyTorch)
-
-\- Binary classification: fractured vs non-fractured
-
-\- Evaluation using confusion matrix, precision, sensitivity, and specificity
-
-\- Grad-CAM used to visualize model attention regions
-
-
-
-\## Results
-
-The model demonstrates high sensitivity to fractures while exhibiting conservative behavior that leads to false positives.
-
-Grad-CAM visualizations show the model focuses primarily on wrist bone regions.
-
-
-
-\## Limitations
-
-\- Limited dataset size
-
-\- Conservative predictions reduce specificity
-
-\- Model does not localize exact fracture lines
-
-
-
-\## How to Run
-
-```bash
+## How to Run
+1. Create virtual environment
 
 python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
 
-source venv/bin/activate  # Windows: venv\\Scripts\\activate
+2. Install dependencies
 
 pip install -r requirements.txt
 
+3. Train model
+
 python src/train.py
 
-python src/grad\_cam.py
+4. Generate Grad-CAM visualizations
 
+python src/grad_cam.py
 
+## Project Structure
 
+medical-ai-fracture-detection/
+├── data/
+│   └── raw/
+│       └── x-rayData/
+│           ├── train/
+│           └── val/
+├── results/
+├── src/
+│   ├── train.py
+│   ├── data_loader.py
+│   ├── model.py
+│   └── grad_cam.py
+├── requirements.txt
+├── README.md
+└── .gitignore
+
+## Tech Stack
+- Python
+- PyTorch
+- OpenCV
+- NumPy
+- Grad-CAM
+- Git / GitHub
+
+## Future Work
+- Improve class balance
+- Transfer learning with pretrained medical models
+- Add MRI-based ligament/tendon detection
+- Multi-label classification
+- ROC-AUC and clinical-grade evaluation metrics
+
+## Disclaimer
+
+This project is for educational and research purposes only and is not intended for clinical use.
