@@ -8,7 +8,7 @@ The project was inspired by a personal wrist injury and aims to explore **medica
 ---
 
 ## Dataset
-- X-ray image dataset
+- X-ray image dataset (Images are not included in this repository due to size)
 - Two classes:
   - Fractured
   - Not Fractured
@@ -58,6 +58,9 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 ### 3. Train model
+```text
+need x-ray image dataset (personally used dataset from Kaggle)
+```
 ```bash
 python src/train.py
 ```
