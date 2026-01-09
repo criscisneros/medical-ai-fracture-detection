@@ -47,11 +47,6 @@ Grad-CAM is used to visualize which regions of an X-ray most influenced the mode
 ### Example Outputs
 <img width="1221" height="438" alt="Screenshot 2026-01-07 232440" src="https://github.com/user-attachments/assets/2f63fd3f-4490-4972-92e6-6d4ec51a7a8a" />
 
-```text
-results/
-├── fractured_correct.png
-├── non_fractured_correct.png
-```
 ## How to Run
 ### 1. Create virtual environment
 ```bash
