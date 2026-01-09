@@ -58,9 +58,7 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 ### 3. Train model
-```text
 need x-ray image dataset (personally used dataset from Kaggle)
-```
 ```bash
 python src/train.py
 ```
